@@ -1,0 +1,25 @@
+{
+  "name": "corgi",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Krisan Alfa Timur <krisan47@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [
+    "globals"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "material-design-lite": "^1.1.3",
+    "roboto-fontface": "^0.4.5"
+  }
+}
