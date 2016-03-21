@@ -32,8 +32,8 @@ if ( ! function_exists('app')) {
     function app($make = null, $parameters = [])
     {
         return ($make === null)
-        ? Container::getInstance()
-        : Container::getInstance()->make($make, $parameters);
+            ? Container::getInstance()
+            : Container::getInstance()->make($make, $parameters);
     }
 }
 
