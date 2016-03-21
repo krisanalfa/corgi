@@ -42,7 +42,7 @@
         </header>
 
         <nav class="corgi-navigation mdl-navigation mdl-color--blue-grey-800">
-            <span class="mdl-navigation__link"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</span>
+            <span class="mdl-navigation__link active"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</span>
         </nav>
     </div>
 

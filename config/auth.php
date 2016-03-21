@@ -38,8 +38,8 @@ return [
 
     'guards' => [
         'api' => [
-            'driver' => 'session',
-            'provider' => 'users'
+            'driver'   => 'session',
+            'provider' => 'users',
         ],
     ],
 
@@ -64,7 +64,7 @@ return [
         'users' => [
             'driver' => 'eloquent',
             // We should get model name from JWT configuration
-            'model'  => app('config')->get('jwt.user'),
+            'model' => app('config')->get('jwt.user'),
         ],
     ],
 

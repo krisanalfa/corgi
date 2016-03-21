@@ -3,16 +3,16 @@
 namespace App\Exceptions;
 
 use Exception;
+use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Session\TokenMismatchException;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Response;
-use Illuminate\Session\TokenMismatchException;
 use Illuminate\Validation\ValidationException;
-use Illuminate\Auth\Access\AuthorizationException;
+use Laravel\Lumen\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 use Tymon\JWTAuth\Exceptions\TokenExpiredException;
 use Tymon\JWTAuth\Exceptions\TokenInvalidException;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Symfony\Component\HttpKernel\Exception\HttpException;
-use Laravel\Lumen\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
 {
@@ -36,9 +36,7 @@ class Handler extends ExceptionHandler
      *
      * This is a great spot to send exceptions to Sentry, Bugsnag, etc.
      *
-     * @param  \Exception  $e
-     *
-     * @return void
+     * @param \Exception $e
      */
     public function report(Exception $e)
     {
@@ -63,8 +61,8 @@ class Handler extends ExceptionHandler
     /**
      * Render an exception into an HTTP response.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Exception  $e
+     * @param \Illuminate\Http\Request $request
+     * @param \Exception               $e
      *
      * @return \Illuminate\Http\Response
      */
@@ -82,7 +80,7 @@ class Handler extends ExceptionHandler
     /**
      * Render token expired exception.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param \Illuminate\Http\Request                        $request
      * @param \Tymon\JWTAuth\Exceptions\TokenExpiredException $e
      *
      * @return \Illuminate\Http\Response
@@ -95,7 +93,7 @@ class Handler extends ExceptionHandler
     /**
      * Render token invalid exception.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param \Illuminate\Http\Request                        $request
      * @param \Tymon\JWTAuth\Exceptions\TokenInvalidException $e
      *
      * @return \Illuminate\Http\Response
@@ -108,7 +106,7 @@ class Handler extends ExceptionHandler
     /**
      * Render token mismatch exception.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param \Illuminate\Http\Request                   $request
      * @param \Illuminate\Session\TokenMismatchException $e
      *
      * @return \Illuminate\Http\Response
